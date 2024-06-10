@@ -11,7 +11,7 @@ def brain_progression():
     begin_step_random = 1
     end_step_random = 5
     winscore = 3
-    lenght_progression = 10
+    length_progression = 10
     print(f"Hello, {name}!")
     count_quest = 0
     print("What number is missing in the progression?")
@@ -20,7 +20,7 @@ def brain_progression():
         quest_numbers = []
         begin_progression = randint(begin_random, end_random)
         step = randint(begin_step_random, end_step_random)
-        while len(quest_numbers) <= lenght_progression:
+        while len(quest_numbers) <= length_progression:
             for i in range(begin_progression, 100, step):
                 quest_numbers.append(i)
         copy_numbers = quest_numbers[:]
@@ -36,5 +36,5 @@ def brain_progression():
             flag = False
             uncorrect(user_answ, correct_answer, name)
             break
-    if count_quest == winscore and flag == True:
+    if count_quest == winscore and flag is True:
         print(f"Congratulations, {name}!")

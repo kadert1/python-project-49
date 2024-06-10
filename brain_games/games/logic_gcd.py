@@ -26,5 +26,5 @@ def brain_gcd():
             flag = False
             uncorrect(user_ans, result, name)
             break
-    if count_quest == winscore and flag == True:
+    if count_quest == winscore and flag is True:
         print(f"Congratulations, {name}!")

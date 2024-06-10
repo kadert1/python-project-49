@@ -30,5 +30,5 @@ def brain_even():
                 flag = False
                 uncorrect(user_ans, 'no', name)
                 break
-    if count_quest == winscore and flag == True:
+    if count_quest == winscore and flag is True:
         print(f"Congratulations, {name}!")

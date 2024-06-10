@@ -8,8 +8,8 @@ def brain_prime():
     begin_random = 1
     end_random = 20
     winscore = 3
-    print(f"Hello, {name}!")
     count_quest = 0
+    print(f"Hello, {name}!")
     print("Answer \"yes\" if given number is prime. Otherwise answer \"no\".")
     while count_quest < winscore:
         count_quest += 1
@@ -33,7 +33,5 @@ def brain_prime():
                 flag = False
                 uncorrect(user_ans, 'no', name)
                 break
-    if count_quest == winscore and flag == True:
+    if count_quest == winscore and flag is True:
         print(f"Congratulations, {name}!")
-
-
