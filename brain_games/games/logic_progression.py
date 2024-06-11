@@ -1,5 +1,6 @@
 from random import randint
 from ..engine import welcome_user, name_user, user_answer, uncorrect
+from ..engine import congratulations
 
 
 def brain_progression():
@@ -36,5 +37,4 @@ def brain_progression():
             flag = False
             uncorrect(user_answ, correct_answer, name)
             break
-    if count_quest == winscore and flag is True:
-        print(f"Congratulations, {name}!")
+    congratulations(count_quest, winscore, flag, name)

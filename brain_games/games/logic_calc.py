@@ -1,5 +1,6 @@
 from ..engine import welcome_user, name_user, user_answer, uncorrect
 from random import randint, choice
+from ..engine import congratulations
 
 
 def brain_calc():
@@ -32,5 +33,4 @@ def brain_calc():
             uncorrect(user_ans, answer, name)
             flag = False
             break
-    if count_quest == winscore and flag:
-        print(f'Congratulations, {name}!')
+    congratulations(count_quest, winscore, flag, name)
