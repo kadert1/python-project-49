@@ -16,3 +16,8 @@ def user_answer():
 def uncorrect(us_answ, result, name):
     print(f"""'{us_answ}' is wrong answer ;(. Correct answer was '{result}'.
 Let's try again, {name}!""")
+
+
+def congratulations(count_question, winscore, flag, name):
+    if count_question == winscore and flag:
+        print(f"Congratulations, {name}!")
