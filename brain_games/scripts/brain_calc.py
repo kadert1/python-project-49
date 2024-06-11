@@ -3,6 +3,7 @@ from brain_games.games.logic_calc import brain_calc
 
 
 def main():
+    """Adds two numbers together."""
     brain_calc()
 
 

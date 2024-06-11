@@ -1,8 +1,9 @@
-#!/usr/bin/env python 3
-from brain_games.logic import brain_even
+#!/usr/bin/env python3
+from brain_games.games.logic_even import brain_even
 
 
 def main():
+    """is the number even."""
     brain_even()
 
 
