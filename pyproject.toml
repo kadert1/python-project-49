@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Games based on mathematics"
 authors = ["kaderti <vol4ckov.vladik@yandex.ru>"]
 readme = "README.md"
 packages = [
