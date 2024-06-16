@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-from brain_games.games.logic_gcd import brain_gcd
+from brain_games.games import logic_gcd
+from brain_games import engine_games
 
 
 def main():
     """the smallest common divisor."""
-    brain_gcd()
+    engine_games.engine(logic_gcd)
 
 
 if __name__ == '__main__':
