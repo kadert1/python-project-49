@@ -1,36 +1,22 @@
-from ..engine import welcome_user, name_user, user_answer, uncorrect
 from random import randint, choice
-from ..engine import congratulations
 
 
-def brain_calc():
-    welcome_user()
-    name = name_user()
-    print(f"Hello, {name}!")
-    operations = ['+', '-', '*']
-    count_quest = 0
-    winscore = 3
-    begin_random = 1
-    end_random = 10
-    flag = True
-    print("What is the result of the expression?")
-    while count_quest < winscore:
-        one_num = randint(begin_random, end_random)
-        two_num = randint(begin_random, end_random)
-        random_operations = choice(operations)
-        print('Question:', one_num, random_operations, two_num)
-        user_ans = user_answer()
-        count_quest += 1
-        if random_operations == '+':
-            answer = str(one_num + two_num)
-        if random_operations == '-':
-            answer = str(one_num - two_num)
-        if random_operations == '*':
-            answer = str(one_num * two_num)
-        if answer == user_ans:
-            print('Correct!')
-        else:
-            uncorrect(user_ans, answer, name)
-            flag = False
-            break
-    congratulations(count_quest, winscore, flag, name)
+DESCRIPT = "What is the result of the expression?"
+
+
+def logic():
+    begin_random_num = 1
+    end_random_num = 10
+    random_num_one = randint(begin_random_num, end_random_num)
+    random_num_two = randint(begin_random_num, end_random_num)
+    operator = choice('+-*')
+    if operator == '+':
+        question = f"{random_num_one} + {random_num_two}"
+        correct = random_num_one + random_num_two
+    if operator == '-':
+        question = f"{random_num_one} - {random_num_two}"
+        correct = random_num_one - random_num_two
+    if operator == '*':
+        question = f"{random_num_one} * {random_num_two}"
+        correct = random_num_one * random_num_two
+    return question, str(correct)
