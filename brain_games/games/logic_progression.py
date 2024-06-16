@@ -17,6 +17,6 @@ def logic():
     for i in range(LENGHT_PROGRESSION):
         progression.append(progression[i] + step_progression)
     correct = progression[random_question]
-    progression[random_question] = '...'
+    progression[random_question] = '..'
     question = list(map(str, progression))
     return ' '.join(question), str(correct)
