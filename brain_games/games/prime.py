@@ -4,17 +4,22 @@ DESCRIPT = "Answer \"yes\" if given number is prime. Otherwise answer \"no\"."
 LENGHT_CORRECT_ANSWER = 2
 
 
+def is_prime(value):
+    result_list = []
+    for i in range(1, value + 1):
+        if value % i == 0:
+            result_list.append(i)
+    if len(result_list) == LENGHT_CORRECT_ANSWER:
+        return True
+
+
 def generate_round():
     begin_random_num = 1
     end_random_num = 50
     random_num = randint(begin_random_num, end_random_num)
-    result_list = []
-    for i in range(1, random_num + 1):
-        if random_num % i == 0:
-            result_list.append(i)
-    if len(result_list) == LENGHT_CORRECT_ANSWER:
-        correct = 'yes'
-    else:
-        correct = 'no'
     question = random_num
+    correct = 'no'
+    if is_prime(random_num):
+        correct = 'yes'
+
     return question, correct
