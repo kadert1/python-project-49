@@ -12,7 +12,7 @@ def engine(game):
     print(game.DESCRIPT)
     while count_round < WINSCORE:
         count_round += 1
-        question, correc = game.logic()
+        question, correc = game.generate_round()
         print(f'Question: {question}')
         ans = prompt.string('Your answer: ')
         if ans != correc:
